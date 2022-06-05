@@ -1,0 +1,83 @@
+div.left {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    background: #636b74;
+}
+div.right {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    background: #636b74;
+}
+table {
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+    text-align: center;
+}
+input.summit-btn {
+    background: #0f61e4;
+    border: solid 1px var(--twitter-blue);
+    border-radius: 15px;
+    color: var(--twitter-blue);
+    margin: 20px;
+    padding: 15px 180px;
+    text-align: center;
+    display:inline-block;
+    cursor:pointer;
+}
+input.summit-btn:active {
+    position : relative;
+    top : 1px;
+}
+.joinForm {
+    position:absolute;
+    width:400px;
+    height:400px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:40%;
+    left:23%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+}
+.joinForm h2 {
+    text-align: center;
+    margin: 30px;
+}
+.textForm {
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 10px 10px;
+    text-align: left;
+}
+.name, .id, .pw, .date, .member_address, .member_deaddress, .email {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+.adminForm {
+    position:absolute;
+    width:700px;
+    height:400px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:40%;
+    left:70%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+}
