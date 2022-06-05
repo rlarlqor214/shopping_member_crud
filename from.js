@@ -77,3 +77,24 @@ function updateRecord(formData) {
     selectedRow.cells[5].innerHTML = formData.member_deaddress;
     selectedRow.cells[6].innerHTML = formData.email;
 }
+
+function onDelete(td) {
+    if (confirm('정말 삭제하나요?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("memberlist").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+
+function validate() {
+    isValid = true;
+    if (document.getElementById("id").value == "") {
+        isValid = false;
+        document.getElementById("id_error").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("id_error").classList.contains("hide"))
+            document.getElementById("id_error").classList.add("hide");
+    }
+    return isValid;
+}
