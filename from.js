@@ -56,3 +56,24 @@ function resetForm() {
     document.getElementById("email").value = "";
     selectedRow = null;
 }
+
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("id").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("name").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("pw").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("date").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("member_address").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("member_deaddress").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("email").value = selectedRow.cells[6].innerHTML;
+}
+
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.id;
+    selectedRow.cells[1].innerHTML = formData.name;
+    selectedRow.cells[2].innerHTML = formData.pw;
+    selectedRow.cells[3].innerHTML = formData.date;
+    selectedRow.cells[4].innerHTML = formData.member_address;
+    selectedRow.cells[5].innerHTML = formData.member_deaddress;
+    selectedRow.cells[6].innerHTML = formData.email;
+}
