@@ -17,22 +17,33 @@ table {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border-collapse : collapse;
 }
 th, td {
     border-bottom: 1px solid #444444;
     padding: 10px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse : collapse;
+}
+tbody tr:nth-child(2n) {
+    background-color: #bbdefb;
+}
+tbody tr:nth-child(2n+1) {
+    background-color: #e3f2fd;
 }
 input.summit-btn {
+    font-size: large;
     background: #0f61e4;
     border: solid 1px var(--twitter-blue);
     border-radius: 15px;
     color: var(--twitter-blue);
-    margin: 20px;
-    padding: 15px 180px;
+    padding: 15px 140px;
     text-align: center;
     display:inline-block;
     cursor:pointer;
+
 }
 input.summit-btn:active {
     position : relative;
@@ -43,12 +54,10 @@ input.summit-btn:active {
     width:400px;
     height:400px;
     padding: 30px, 20px;
-    background-color:#FFFFFF;
     text-align:center;
     top:40%;
     left:23%;
     transform: translate(-50%,-50%);
-    border-radius: 15px;
 }
 .joinForm h2 {
     text-align: center;
@@ -59,6 +68,8 @@ input.summit-btn:active {
     margin: 30px;
     padding: 10px 10px;
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 .name, .id, .pw, .date, .member_address, .member_deaddress, .email {
     width: 100%;
@@ -74,10 +85,8 @@ input.summit-btn:active {
     width:700px;
     height:400px;
     padding: 30px, 20px;
-    background-color:#FFFFFF;
     text-align:center;
     top:40%;
     left:70%;
     transform: translate(-50%,-50%);
-    border-radius: 15px;
 }
