@@ -1,6 +1,7 @@
 var selectedRow = null
-
+var sum=0;
 function onFormSubmit(){
+    sum++;
     if(validate()) {
         var formData = readFormData();
         if (selectedRow == null)
@@ -26,24 +27,26 @@ function readFormData(){
 function insertNewRecord(data) {
     var table = document.getElementById("memberlist").getElementsByTagName("tbody")[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.id;
+    cell1 = newRow.insertCell(0)
+    cell1.innerHTML = sum;
     cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.name;
+    cell2.innerHTML = data.id;
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.pw;
+    cell3.innerHTML = data.name;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.date;
+    cell4.innerHTML = data.pw;
     cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.member_address;
+    cell5.innerHTML = data.date;
     cell6 = newRow.insertCell(5);
-    cell6.innerHTML = data.member_deaddress;
+    cell6.innerHTML = data.member_address;
     cell7 = newRow.insertCell(6);
-    cell7.innerHTML = data.email;
+    cell7.innerHTML = data.member_deaddress;
     cell8 = newRow.insertCell(7);
-    cell8.innerHTML =  `<a onClick="onEdit(this)">Edit</a>`;
+    cell8.innerHTML = data.email;
     cell9 = newRow.insertCell(8);
-    cell9.innerHTML =  `<a onClick="onDelete(this)">Delete</a>`;
+    cell9.innerHTML =  `<a onClick="onEdit(this)">Edit</a>`;
+    cell10 = newRow.insertCell(9);
+    cell10.innerHTML =  `<a onClick="onDelete(this)">Delete</a>`;
 }
 
 function resetForm() {
@@ -98,3 +101,23 @@ function validate() {
     }
     return isValid;
 }
+
+function findStr() {
+        var n = 0;
+        var str = document.getElementById("search").value;
+        if(navigator.userAgent.indexOf("rv:11") > -1) {
+            var f, contents = document.body.createTextRange();
+            for(var i = 0; i <= n && (f = contents.findText(str)) != false; i++) {
+                contents.moveStart('character');
+                contents.moveEnd('textedit');
+            }
+            if(f) {
+                contents.moveStart('character', -1);
+                contents.findText(str);
+                contents.select();
+                n++;
+            }
+        } else {
+            window.find(str);
+        }
+    }
