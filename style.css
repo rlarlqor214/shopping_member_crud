@@ -1,3 +1,4 @@
+
 div.left {
     width: 50%;
     float: left;
@@ -14,9 +15,12 @@ table {
     border-top: 1px solid #444444;
     border-collapse: collapse;
     text-align: center;
-    width: 100%;
+    width: auto;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     border-collapse : collapse;
 }
 th, td {
@@ -43,7 +47,6 @@ input.summit-btn {
     text-align: center;
     display:inline-block;
     cursor:pointer;
-
 }
 input.summit-btn:active {
     position : relative;
@@ -55,11 +58,11 @@ input.summit-btn:active {
     height:400px;
     padding: 30px, 20px;
     text-align:center;
-    top:40%;
+    top:43%;
     left:23%;
     transform: translate(-50%,-50%);
 }
-.joinForm h2 {
+.joinForm h3 {
     text-align: center;
     margin: 30px;
 }
@@ -82,11 +85,19 @@ input.summit-btn:active {
 }
 .adminForm {
     position:absolute;
-    width:700px;
+    width:800px;
     height:400px;
     padding: 30px, 20px;
     text-align:center;
-    top:40%;
+    top:45%;
+    left:70%;
+    transform: translate(-50%,-50%);
+}
+.searchForm {
+    position:relative;
+    padding: 100px, 20px;
+    text-align:center;
+    top:10%;
     left:70%;
     transform: translate(-50%,-50%);
 }
