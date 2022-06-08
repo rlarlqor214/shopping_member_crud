@@ -72,13 +72,13 @@ function onEdit(td) {
 }
 
 function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.id;
-    selectedRow.cells[1].innerHTML = formData.name;
-    selectedRow.cells[2].innerHTML = formData.pw;
-    selectedRow.cells[3].innerHTML = formData.date;
-    selectedRow.cells[4].innerHTML = formData.member_address;
-    selectedRow.cells[5].innerHTML = formData.member_deaddress;
-    selectedRow.cells[6].innerHTML = formData.email;
+    selectedRow.cells[1].innerHTML = formData.id;
+    selectedRow.cells[2].innerHTML = formData.name;
+    selectedRow.cells[3].innerHTML = formData.pw;
+    selectedRow.cells[4].innerHTML = formData.date;
+    selectedRow.cells[5].innerHTML = formData.member_address;
+    selectedRow.cells[6].innerHTML = formData.member_deaddress;
+    selectedRow.cells[7].innerHTML = formData.email;
 }
 
 function onDelete(td) {
